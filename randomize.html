@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Randomize
+{% endblock %}
+{% block main %}
+
+<!--Directs user to the randomize HTML page-->
+    <button> <a class="nav-link" href="/randomize">New Random Outfit</a></button>
+    <br>
+
+<!--For each value assigned in app.py randomize function creates a new iteration and pulls & displays the SQL attributes and image from the photos file-->
+    {%for item in hat%}
+    <figure>
+        <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+        <figcaption> 
+            {{item.name}} 
+        </figcaption>
+        </figure>
+    {%endfor%}
+    {%for item in shirt%}
+    <figure>
+        <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+        <figcaption> 
+            {{item.name}} 
+        </figcaption>
+        </figure>
+    {%endfor%}
+    {%for item in pants%}
+    <figure>
+        <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+        <figcaption> 
+            {{item.name}} 
+        </figcaption>
+        </figure>
+    {%endfor%}
+    {%for item in shoes%}
+    <figure>
+        <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+        <figcaption> 
+            {{item.name}} 
+        </figcaption>
+        </figure>
+    {%endfor%}
+    {%for item in jacket%}
+    <figure>
+        <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+        <figcaption> 
+            {{item.name}} 
+        </figcaption>
+        </figure>
+    {%endfor%}
+{% endblock %}

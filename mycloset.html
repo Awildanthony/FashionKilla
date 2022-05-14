@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Closet
+{% endblock %}
+{% block main %}
+<!--Links user to the add new html page-->
+    <button> <a style="color:white" class="nav-link" href="/addnew">Add New Clothing Item</a></button>
+    <br>
+
+<!--Iterates through every item, displaying image by calling it from the photos folder and calling & displaying the SQL data attributes-->
+    {% for item in closet %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        <big><b>{{item.name}}</b></big> <br> 
+        Type: <i>{{item.type}}</i> <br> 
+        Color: <i>{{item.color}}</i> <br>
+        <form action="/delete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+    <br>
+
+<!--Links users to the typesort and colorsort HTML page-->
+    <button> <a style="color:white" class="nav-link" href="/typesort">Sort by Type</a></button>
+    <button> <a style="color:white" class="nav-link" href="/colorsort">Sort by Color</a></button>
+{% endblock %}

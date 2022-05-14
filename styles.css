@@ -1,0 +1,138 @@
+/* Size for brand text in navbar */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+
+/* Colors for brand text in navbar*/
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+
+/* center styling */
+div {
+    text-align: center;
+}
+
+
+/* CSS for clothing icons */
+figure {
+    display: inline-block;
+    border: 3px dotted #7D3C1D;
+    margin: 20px; /* adjust as needed */
+    background-color: #783131;
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    text-align: center;
+}
+
+
+/* Website Background (Opaque + Greyscaled) Image */
+body {
+    background-image: url('background.png');
+}
+
+
+/* Headers Text Styling */
+h0 {
+    font-family: "Jazz LET", fantasy;
+    -webkit-text-stroke: 1.5px #660f0f;
+    font-size: 50px;
+    color: #170000;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 45px;
+    color: black;
+}
+
+h2 {
+    font-family: "Jazz LET", fantasy;
+    font-size: 35px;
+    color: #660f0f;
+    -webkit-text-stroke: 1.5px black;
+}
+
+
+/* Regular Text Styling */
+p {
+    font-family: "Times New Roman", Times, serif;
+    padding: 8px 16px 8px 16px;
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+    -webkit-text-stroke: 1.5px #660f0f;
+}
+
+
+/* Button Styling */
+button
+{
+    margin: 5px;
+    display: inline-block;
+    padding: 8px 16px 8px 16px;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #B71C1C;
+    border-radius: 10px;
+    color: black;
+    background-image: linear-gradient(#803433, #520200);
+}
+
+
+/* Header buttons flash when cursor hovers over them */
+nav a:hover
+{
+    background-color: grey
+}
+
+
+/* Create three side-by-side text columns that float next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right columns */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive text layout - makes the three columns in Homepage stack on top of each other instead of next to each other when screen compresses */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}

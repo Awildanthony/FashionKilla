@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Explore
+{% endblock %}
+
+{% block main %}
+    
+    <h0>Explore!</h0> 
+
+    <br>
+    <br>
+
+<!-- Allows User to Upload new outfit to explore page
+Users will be allowed to upload a single image of their entire outfit and a name of their outfit
+Users will then be able to view all posts from all accounts made on the same computer, via the "Explore Page" -->
+    <button> <a style="color:white" class="nav-link" href="/addnewoutfit">Add New Outfit to Explore Page</a></button>
+
+    <br>
+
+<!-- Uploading submitted outfit icon to explore page -->
+    {% for item in explore %}
+    <figure>
+    <!-- Icon Image Upload -->
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <!-- Icon Caption Upload (Name) -->
+    <figcaption> 
+        <big> Name: <b>{{item.name}}</b></big> <br> 
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+{% endblock %}

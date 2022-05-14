@@ -1,0 +1,132 @@
+<!-- creates a page that sorts items in respect to their clothing type -->
+{% extends "layout.html" %}
+
+{% block title %}
+    My Closet
+{% endblock %}
+{% block main %}
+<!-- sends user to page where they can add a new clothing item -->
+    <button> <a class="nav-link" href="/addnew">Add New Clothing Item</a> </button>
+    <br>
+    <br>
+
+<!-- header with HATS at top and displays all hats in the user's closet
+it does this by iterating through the list of hats that was created in app.py -->
+    <h2><u>HATS</u></h2>
+    {% for item in hats %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/typedelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- same thing as with hats but with shirts. continues until all types are accounted for. -->
+
+    <h2><u>SHIRTS</u></h2>
+
+    {% for item in shirts %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/typedelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+    <h2><u>JACKETS</u></h2>
+
+    {% for item in jackets %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/typedelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+    <h2><u>DRESSES</u></h2>
+
+    {% for item in dresses %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/typedelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+    <h2><u>PANTS</u></h2>
+
+    {% for item in pantss %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/typedelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+    <h2><u>SHOES</u></h2>
+
+    {% for item in shoess %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/typedelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+<!-- buttons allow the user to sort by color or type -->
+    <button> <a class="nav-link" href="/typesort">Sort by Type</a></button>
+    <button> <a class="nav-link" href="/colorsort">Sort by Color</a></button>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add New Item
+{% endblock %}
+
+
+{% block main %}
+
+<!-- Form submission (POST method) that asks user for new article of clothing: image, name, clothing type, color -->
+<form action="/addnew" method="post" enctype='multipart/form-data'>
+
+    <!-- "Add New Item" Banner -->
+    <div class="alert alert-info" role="alert" style="background-color: #803433">
+    <center><b><h1> Add New Item </h1></b></center>
+    </div>
+
+    <p><center>Start by uploading an image of your clothing item! (Please make sure you upload a JPEG file)</center></p>
+
+    <!-- "Upload Image" Functionality, accepting JPEG files and then displaying them on the screen once selected & uploaded natively -->
+    <p><input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
+    <p><center><label for="file" style="cursor: pointer;"><u>Upload Image</u></center></label></p>
+    <p><center><img id="output" width="200" /></center></p>
+
+<!-- JS script that Loads Image onto Screen -->
+<script>
+var loadFile = function(event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+
+<!-- Clothing Category & Color Drop-Down Menus (values will not change so no need for dynamic arrays) -->
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="Clothing Name" type="text">
+    </div>
+    <br><br>
+    <label for="item-select">Choose a clothing category:</label>
+    <select name="type" id="type">
+        <option value="">--Please choose an option--</option>
+        <option value="hat">Hat</option>
+        <option value="shirt">Shirt</option>
+        <option value="pants">Pants</option>
+        <option value="shoes">Shoes</option>
+        <option value="dress">Dress</option>
+        <option value="jacket">Jacket</option>
+    </select>
+    <br><br>
+    <label for="item-select">Choose the color of your item:</label>
+    <select name="color" id="color">
+        <option value="">--Please choose an option--</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="black">Black</option>
+        <option value="white">White</option>
+        <option value="pink">Pink</option>
+        <option value="navy">Navy</option>
+        <option value="grey">Grey</option>
+        <option value="brown">Brown</option>
+        <option value="purple">Purple</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+<br><br>
+
+<!-- "Back to Closet" Button -->
+    <center><button id="myButton" class="float-left submit-button" >Back to Closet</button></center>
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "/mycloset";
+        };
+    </script>
+
+{% endblock %}

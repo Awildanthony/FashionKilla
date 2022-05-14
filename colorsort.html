@@ -1,0 +1,273 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Color Sort
+{% endblock %}
+
+
+{% block main %}
+
+<!-- Gives option to add new clothing item (redirect button), like "My Closet" Page -->
+    <button> <a class="nav-link" href="/addnew">Add New Clothing Item</a> </button>
+
+    <br>
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [RED]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>RED</u></h2>
+
+    {% for item in reds %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [BLUE]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>BLUE</u></h2>
+    {% for item in blues %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [GREEN]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>GREEN</u></h2>
+    {% for item in greens %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [YELLOW]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>YELLOW</u></h2>
+    {% for item in yellows %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [ORANGE]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>ORANGE</u></h2>
+    {% for item in oranges %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [BLACK]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>BLACK</u></h2>
+    {% for item in blacks %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [WHITE]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>WHITE</u></h2>
+    {% for item in whites %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [PINK]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>PINK</u></h2>
+    {% for item in pinks %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [NAVY]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>NAVY</u></h2>
+    {% for item in navys %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [GREY]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>GREY</u></h2>
+    {% for item in greys %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [BROWN]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>BROWN</u></h2>
+    {% for item in browns %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- Query through every red item uploaded to database (also projected on screen)
+Figure (clothing article icon that is color [PURPLE]) will project its name, type of clothing, and color (dynamically-aquired from database)
+Offers form (button) with option to "Delete" icon, which hides icon from page and deletes item's corresponding row in database -->
+    <h2><u>PURPLE</u></h2>
+    {% for item in purples %}
+    <figure>
+    <img src="{{url_for('static',filename='/'.join(['photos', item.photo]))}}" width="200" height = "200" />
+    <figcaption> 
+        Name: {{item.name}} <br> 
+        Type: {{item.type}} <br> 
+        Color: {{item.color}} <br>
+        <form action="/colordelete" method="post">
+            <input value = "{{ item.itemid }}" name = "idnumber" type = "hidden"></button>
+            <input class="btn btn-primary" type="submit" value = "Delete"></button>
+        </form>
+    </figcaption>
+    </figure>
+    {%endfor%}
+
+    <br>
+
+<!-- 2 Buttons that execute "Sort by Type" command and "Sort by Color" command, respectively -->
+    <button> <a class="nav-link" href="/typesort">Sort by Type</a></button>
+    <button> <a class="nav-link" href="/colorsort">Sort by Color</a></button>
+
+{% endblock %}

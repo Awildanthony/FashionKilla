@@ -1,0 +1,89 @@
+<!-- General Description of Website and Navigation/Functionality instructions for each page -->
+<!-- Reading the HTML is pretty self-explanatory as it's just plain text, and the same text appears on the live site -->
+{% extends "layout.html" %}
+
+{% block title %}
+    FashionKilla
+{% endblock %}
+
+{% block main %}
+
+
+    <head>
+
+        <title>
+
+        Fashionkilla
+
+        </title>
+
+    </head>
+
+            <body>
+
+                <h1>Welcome to <h0>Fashionkilla!</h0></h1>
+
+                <p>Fashionkilla is a website that allows you to save and keep track of all your clothes in one easy-to-access online environment. 
+
+                    <br>Think of it as a digital closet for your on-the-go shopping, where you might need some help remembering what clothes you already own
+
+                    or what store-bought clothes could potentially go well with clothes you already own. <br> See below for usage instructions and navigation.</p>
+
+                <hr>
+
+                <h2>Navigation:</h2>
+
+                <p>At the top of the screen are five buttons that will redirect you to four different pages: <br> Regsiter, Login, My Closet, Explore, and Outfits.</p> <br>
+
+                <hr>
+
+        <div class="row">
+            <div class="column side">
+                <h2><u>Register</u>:</h2>
+
+                <p>Click "Register" at the top of the page to make a Fashionkilla account. <br> Afterwards, you may Log In.</p> 
+                <br>
+                <h2><u>Login</u>:</h2>
+
+                <p>By logging in to an account, Fashionkilla can save and store your changes so that you may come back to your closet anytime, just as you
+
+                    left it. <br> It also allows you to see other users' outfits online via the "Explore" page.</p> <br>
+            </div>
+
+            <div class="column middle">
+                <h2><u>My Closet</u>:</h2>
+
+                <p>The "My Closet" feature will likely be of greatest interest to you. After logging in, the My Closet page will allow you to 
+
+                    add articles of clothing to your closet. <br> When doing so, you can give your article of clothing a name, upload an image of it,
+
+                    and assign it different tags like Clothing Type and Color(s). The clothing type and color tags you assign to your clothes will help you
+
+                    to oranize them and find them more easily in the future, as well as find other clothes that might match their color schemes. <br> By having 
+
+                    several different clothing types, you may also begin to craft outfits, which Fashionkilla allows you to do via the Outfits feature.</p> <br>
+
+                    <hr>
+
+                <h2><u>Outfits</u>:</h2>
+
+                <p>The "Outfits" function allows you to randomly generate an outfit from all of the articles of clothing in your closet. <br> Results will be 
+                    a compilation of seperate randomly-selected clothing types from a pool of each clothing article of that type. <br> A simple function for 
+                    those who just can't make up their mind of what to wear, or just those who are "feeling lucky". <br>
+                </p>
+            </div>
+
+            <div class="column side">
+
+                <h2><u>Explore</u>:</h2>
+
+                <p>The "Explore" Page is a fun way to see what outfits others have made and chosen to share publically with all Fashionkilla users. <br> To 
+
+                    submit an outfit to the explore page, simply navigate to the Explore page and click the "ADD OUTFIT" button. <br> This will then allow you to 
+
+                    choose an outfit to submit to the Explore page.</p> <br>
+            </div>
+        </div>
+
+    </body> 
+{% endblock %}
