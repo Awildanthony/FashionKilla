@@ -1,4 +1,4 @@
-# FashionKilla
+# FashionKilla -- Fall 2021
 
 ## Organization
 To execute our code for FashionKilla, you must first download the .zip file to your Github repository. 
